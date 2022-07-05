@@ -1,27 +1,28 @@
-import { _decorator, Component, Node, NodeEventType, Vec2, Vec3, Prefab, instantiate, director } from 'cc';
-const { ccclass, property } = _decorator;
 
-@ccclass('PlayerController')
-export class PlayerController extends Component {
+const {ccclass, property} = cc._decorator;
 
-    @property(Prefab)
-    bullet: Prefab = null;
+@ccclass
+export default class PlayerController extends cc.Component {
 
-    start() {
-      this.node.on(NodeEventType.TOUCH_MOVE, (event) => {
-        const touchLocation = event.getLocation();
-        this.node.setPosition(new Vec3(touchLocation.x - 320, touchLocation.y - 480, 0));
-      });
+  @property(cc.Prefab)
+  bullet: cc.Prefab = null;
 
-      this.schedule(() => {
-        let bullet = instantiate(this.bullet);
-        bullet.setParent(this.node.parent);
-        bullet.setPosition(new Vec3(this.node.position.x, this.node.position.y + 56, 0));
-      }, 0.5);
-    }
+  start() {
+    this.node.on(cc.Node.EventType.TOUCH_MOVE, (event) => {
+      this.node.setPosition(event.getLocation());
+    });
 
-    update(deltaTime: number) {
-        
-    }
+    this.schedule(() => {
+      let bullet = cc.instantiate(this.bullet);
+      bullet.setParent(cc.director.getScene());
+      bullet.setPosition(new cc.Vec2(this.node.x, this.node.y + 85));
+    }, 0.5);
+
+    cc.director.getCollisionManager().enabled = true;
+  }
+
+  update(deltaTime: number) {
+      
+  }
+
 }
-
