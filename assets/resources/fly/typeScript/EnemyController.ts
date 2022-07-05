@@ -1,18 +1,15 @@
-import { _decorator, Component, Node } from 'cc';
-const { ccclass, property } = _decorator;
+const {ccclass, property} = cc._decorator;
 
-@ccclass('Enemy')
-export default class EnemyController extends Component {
-    start() {
+@ccclass
+export default class EnemyController extends cc.Component {
+
+    start () {
 
     }
 
-    update(deltaTime: number) {
-        
-    }
+    // update (dt) {}
 
     die() {
       this.node.destroy();
     }
 }
-
