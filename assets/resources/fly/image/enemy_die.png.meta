@@ -1,75 +1,31 @@
 {
-  "ver": "1.0.23",
-  "importer": "image",
-  "imported": true,
+  "ver": "2.2.0",
   "uuid": "226659b2-a2e6-4e2a-8855-64ddbd8adabf",
-  "files": [
-    ".json",
-    ".png"
-  ],
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
   "subMetas": {
-    "6c48a": {
-      "importer": "texture",
+    "enemy_die": {
+      "ver": "1.0.3",
       "uuid": "226659b2-a2e6-4e2a-8855-64ddbd8adabf@6c48a",
-      "displayName": "enemy_die",
-      "id": "6c48a",
-      "name": "texture",
-      "userData": {
-        "wrapModeS": "clamp-to-edge",
-        "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "226659b2-a2e6-4e2a-8855-64ddbd8adabf",
-        "isUuid": true,
-        "minfilter": "linear",
-        "magfilter": "linear",
-        "mipfilter": "none",
-        "anisotropy": 0
-      },
-      "ver": "1.0.21",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "f9941": {
-      "importer": "sprite-frame",
-      "uuid": "226659b2-a2e6-4e2a-8855-64ddbd8adabf@f9941",
-      "displayName": "enemy_die",
-      "id": "f9941",
-      "name": "spriteFrame",
-      "userData": {
-        "trimType": "auto",
-        "trimThreshold": 1,
-        "rotated": false,
-        "offsetX": -0.5,
-        "offsetY": -4,
-        "trimX": 6,
-        "trimY": 17,
-        "width": 51,
-        "height": 38,
-        "rawWidth": 64,
-        "rawHeight": 64,
-        "borderTop": 0,
-        "borderBottom": 0,
-        "borderLeft": 0,
-        "borderRight": 0,
-        "packable": true,
-        "isUuid": true,
-        "imageUuidOrDatabaseUri": "226659b2-a2e6-4e2a-8855-64ddbd8adabf@6c48a",
-        "atlasUuid": ""
-      },
-      "ver": "1.0.9",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
+      "rawTextureUuid": "226659b2-a2e6-4e2a-8855-64ddbd8adabf",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -0.5,
+      "offsetY": -4,
+      "trimX": 6,
+      "trimY": 17,
+      "width": 51,
+      "height": 38,
+      "rawWidth": 64,
+      "rawHeight": 64,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
       "subMetas": {}
     }
-  },
-  "userData": {
-    "type": "sprite-frame",
-    "fixAlphaTransparencyArtifacts": true,
-    "hasAlpha": true,
-    "redirect": "226659b2-a2e6-4e2a-8855-64ddbd8adabf@f9941"
   }
 }
