@@ -1,75 +1,31 @@
 {
-  "ver": "1.0.23",
-  "importer": "image",
-  "imported": true,
+  "ver": "2.2.0",
   "uuid": "4458b466-cc50-414f-8656-3e4e2973a06d",
-  "files": [
-    ".json",
-    ".png"
-  ],
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
   "subMetas": {
-    "6c48a": {
-      "importer": "texture",
+    "enemy": {
+      "ver": "1.0.3",
       "uuid": "4458b466-cc50-414f-8656-3e4e2973a06d@6c48a",
-      "displayName": "enemy",
-      "id": "6c48a",
-      "name": "texture",
-      "userData": {
-        "wrapModeS": "clamp-to-edge",
-        "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "4458b466-cc50-414f-8656-3e4e2973a06d",
-        "isUuid": true,
-        "minfilter": "linear",
-        "magfilter": "linear",
-        "mipfilter": "none",
-        "anisotropy": 0
-      },
-      "ver": "1.0.21",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "f9941": {
-      "importer": "sprite-frame",
-      "uuid": "4458b466-cc50-414f-8656-3e4e2973a06d@f9941",
-      "displayName": "enemy",
-      "id": "f9941",
-      "name": "spriteFrame",
-      "userData": {
-        "trimType": "auto",
-        "trimThreshold": 1,
-        "rotated": false,
-        "offsetX": -1.5,
-        "offsetY": -4,
-        "trimX": 5,
-        "trimY": 17,
-        "width": 51,
-        "height": 38,
-        "rawWidth": 64,
-        "rawHeight": 64,
-        "borderTop": 0,
-        "borderBottom": 0,
-        "borderLeft": 0,
-        "borderRight": 0,
-        "packable": true,
-        "isUuid": true,
-        "imageUuidOrDatabaseUri": "4458b466-cc50-414f-8656-3e4e2973a06d@6c48a",
-        "atlasUuid": ""
-      },
-      "ver": "1.0.9",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
+      "rawTextureUuid": "4458b466-cc50-414f-8656-3e4e2973a06d",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -1.5,
+      "offsetY": -4,
+      "trimX": 5,
+      "trimY": 17,
+      "width": 51,
+      "height": 38,
+      "rawWidth": 64,
+      "rawHeight": 64,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
       "subMetas": {}
     }
-  },
-  "userData": {
-    "type": "sprite-frame",
-    "fixAlphaTransparencyArtifacts": true,
-    "hasAlpha": true,
-    "redirect": "4458b466-cc50-414f-8656-3e4e2973a06d@f9941"
   }
 }
