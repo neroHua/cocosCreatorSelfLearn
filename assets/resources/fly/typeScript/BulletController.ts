@@ -1,22 +1,28 @@
-import { _decorator, Component, Node, Vec3, PhysicsSystem2D, Contact2DType, Collider2D, IPhysics2DContact} from 'cc';
-import EnemyController from './EnemyController';
+import EnemyController from "./EnemyController";
 
-const { ccclass, property } = _decorator;
+const {ccclass, property} = cc._decorator;
 
-@ccclass('BulletController')
-export class BulletController extends Component {
+@ccclass
+export default class BulletController extends cc.Component {
 
-  @property
-  speed: number = 960;
+    @property
+    speed: number = 960;
 
     start() {
     }
 
     update(deltaTime: number) {
-        this.node.setPosition(new Vec3(this.node.position.x, this.node.position.y + 480 * deltaTime, 0));
+        this.node.y += this.speed * deltaTime;
 
-        if (this.node.position.y > 480) {
+        if (this.node.y > 960) {
           this.node.destroy();
         }
+    }
+
+    onCollisionEnter(other) {
+      if (other.tag == 1) {
+        other.getComponent(EnemyController).die();
+        this.node.destroy();
+      }
     }
 }
