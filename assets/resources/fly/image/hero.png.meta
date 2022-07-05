@@ -1,75 +1,31 @@
 {
-  "ver": "1.0.23",
-  "importer": "image",
-  "imported": true,
-  "uuid": "3b42f0d4-1efb-42dd-b1c5-44b0a240d536",
-  "files": [
-    ".json",
-    ".png"
-  ],
+  "ver": "2.2.0",
+  "uuid": "e3438d0f-825d-4cce-9f45-82b6c82969ae",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
   "subMetas": {
-    "6c48a": {
-      "importer": "texture",
-      "uuid": "3b42f0d4-1efb-42dd-b1c5-44b0a240d536@6c48a",
-      "displayName": "hero",
-      "id": "6c48a",
-      "name": "texture",
-      "userData": {
-        "wrapModeS": "clamp-to-edge",
-        "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "3b42f0d4-1efb-42dd-b1c5-44b0a240d536",
-        "isUuid": true,
-        "minfilter": "linear",
-        "magfilter": "linear",
-        "mipfilter": "none",
-        "anisotropy": 0
-      },
-      "ver": "1.0.21",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "f9941": {
-      "importer": "sprite-frame",
-      "uuid": "3b42f0d4-1efb-42dd-b1c5-44b0a240d536@f9941",
-      "displayName": "hero",
-      "id": "f9941",
-      "name": "spriteFrame",
-      "userData": {
-        "trimType": "auto",
-        "trimThreshold": 1,
-        "rotated": false,
-        "offsetX": 0.5,
-        "offsetY": 5,
-        "trimX": 15,
-        "trimY": 3,
-        "width": 99,
-        "height": 112,
-        "rawWidth": 128,
-        "rawHeight": 128,
-        "borderTop": 0,
-        "borderBottom": 0,
-        "borderLeft": 0,
-        "borderRight": 0,
-        "packable": true,
-        "isUuid": true,
-        "imageUuidOrDatabaseUri": "3b42f0d4-1efb-42dd-b1c5-44b0a240d536@6c48a",
-        "atlasUuid": ""
-      },
-      "ver": "1.0.9",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
+    "hero_die": {
+      "ver": "1.0.3",
+      "uuid": "e3438d0f-825d-4cce-9f45-82b6c82969ae@6c48a",
+      "rawTextureUuid": "e3438d0f-825d-4cce-9f45-82b6c82969ae",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -0.5,
+      "trimX": 15,
+      "trimY": 3,
+      "width": 98,
+      "height": 123,
+      "rawWidth": 128,
+      "rawHeight": 128,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
       "subMetas": {}
     }
-  },
-  "userData": {
-    "type": "sprite-frame",
-    "fixAlphaTransparencyArtifacts": true,
-    "hasAlpha": true,
-    "redirect": "3b42f0d4-1efb-42dd-b1c5-44b0a240d536@f9941"
   }
 }
