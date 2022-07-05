@@ -1,9 +1,9 @@
-import { _decorator, Component, Node, Vec3, UITransform } from 'cc';
-const { ccclass, property } = _decorator;
+const {ccclass, property} = cc._decorator;
 
-@ccclass('BackgroundController')
-export class BackgroundController extends Component {
-    start() {
+@ccclass
+export default class BackGroundController extends cc.Component {
+
+    start () {
 
     }
 
@@ -12,17 +12,17 @@ export class BackgroundController extends Component {
       let background1 = backgroundList[0];
       let background2 = backgroundList[1];
 
-      background1.setPosition(new Vec3(background1.position.x, background1.position.y - 50 * deltaTime));
-      background2.setPosition(new Vec3(background2.position.x, background2.position.y - 50 * deltaTime));
+      background1.y -= 50 * deltaTime;
+      background2.y -= 50 * deltaTime;
 
-      if (background1.position.y <= -960 - 480) {
-        background1.setPosition(new Vec3(background1.position.x, background2.position.y + 960));
+      if (background1.position.y <= -960) {
+        background1.y =  background2.y + 960;
       }
 
-      if (background2.position.y <= -960 - 480) {
-        background2.setPosition(new Vec3(background2.position.x, background1.position.y + 960));
+      if (background2.position.y <= -960) {
+        background2.y =  background1.y + 960;
       }
 
     }
-}
 
+}
