@@ -1,14 +1,7 @@
 {
-  "ver": "1.1.38",
-  "importer": "prefab",
-  "imported": true,
-  "uuid": "d4e478ff-ae36-49f3-9c5b-e64e61c73aa8",
-  "files": [
-    ".json"
-  ],
-  "subMetas": {},
-  "userData": {
-    "syncNodeName": "bullet",
-    "persistent": true
-  }
+  "ver": "1.0.0",
+  "uuid": "5872a533-3aee-4bc3-9d54-479587451aa0",
+  "optimizationPolicy": "AUTO",
+  "asyncLoadAssets": false,
+  "subMetas": {}
 }
