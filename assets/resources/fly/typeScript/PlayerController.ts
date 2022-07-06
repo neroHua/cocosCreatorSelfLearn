@@ -25,4 +25,16 @@ export default class PlayerController extends cc.Component {
       
   }
 
+  onCollisionEnter(other) {
+    if (other.tag == 1) {
+      cc.loader.loadRes("fly/image/hero_die", cc.SpriteFrame, (error, res) => {
+        this.node.getComponent(cc.Sprite).spriteFrame = res;
+      });
+    }
+
+    setTimeout(() => {
+      this.node.destroy();
+    }, 300);
+  }
+
 }
