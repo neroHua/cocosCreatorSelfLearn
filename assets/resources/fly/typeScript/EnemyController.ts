@@ -10,6 +10,12 @@ export default class EnemyController extends cc.Component {
     // update (dt) {}
 
     die() {
-      this.node.destroy();
+      cc.loader.loadRes("fly/image/enemy_die", cc.SpriteFrame, (error, res) => {
+        this.node.getComponent(cc.Sprite).spriteFrame = res;
+      })
+
+      setTimeout(() => {
+        this.node.destroy();
+      }, 300);
     }
 }
