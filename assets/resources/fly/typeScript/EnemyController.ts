@@ -28,6 +28,10 @@ export default class EnemyController extends cc.Component {
         this.node.getComponent(cc.Sprite).spriteFrame = res;
       })
 
+      cc.loader.loadRes("fly/audio/explode", cc.AudioClip, (res, audioClip) => {
+        let explode: number = cc.audioEngine.playEffect(audioClip, false);
+      });
+
       setTimeout(() => {
         this.node.destroy();
       }, 300);
