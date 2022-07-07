@@ -1,7 +1,7 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class BackgroundController extends cc.Component {
+export default class BirdBackgroundController extends cc.Component {
     start () {
     }
 
