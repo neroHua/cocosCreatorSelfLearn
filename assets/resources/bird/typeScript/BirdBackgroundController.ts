@@ -1,3 +1,5 @@
+import BirdController from "./BirdController";
+
 const {ccclass, property} = cc._decorator;
 
 @ccclass
@@ -9,7 +11,15 @@ export default class BirdBackgroundController extends cc.Component {
     @property
     width: number = 288;
 
+    @property(BirdController)
+    bird: BirdController = null;
+
     start () {
+      for (let background of this.node.children) {
+        background.on(cc.Node.EventType.MOUSE_DOWN, () => {
+          this.bird.fly();
+        });
+      }
     }
 
     update (dt) {
