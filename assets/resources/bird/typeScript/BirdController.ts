@@ -73,6 +73,11 @@ export default class BirdController extends cc.Component {
       // }
     }
 
+    fly() {
+      let rigidBody = this.node.getComponent(cc.RigidBody);
+      rigidBody.linearVelocity = cc.v2(0, 300);
+    }
+
     onBeginContact(contact: cc.PhysicsContact, self, other) {
       const contactPointList = contact.getWorldManifold().points;
       const normal = contact.getWorldManifold().normal;
