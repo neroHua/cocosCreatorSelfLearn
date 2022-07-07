@@ -1,46 +1,41 @@
+import BirdController from "./BirdController";
+
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class BirdController extends cc.Component {
+export default class BirdBackgroundController extends cc.Component {
 
     @property
-    direction: cc.Vec2 = cc.v2(0, -1)
+    speed: number = 36;
 
-    onLoad () {
-      cc.director.getPhysicsManager().enabled = true;
-    }
+    @property
+    width: number = 288;
+
+    @property(BirdController)
+    bird: BirdController = null;
 
     start () {
-      // let animation = this.node.getComponent(cc.Animation)
-      // animation.play();
+      for (let background of this.node.children) {
+        background.on(cc.Node.EventType.MOUSE_DOWN, () => {
+          this.bird.fly();
+        });
+      }
     }
 
     update (dt) {
-    }
+      const backgroundList = this.node.children;
+      const background1 = backgroundList[0]; 
+      const background2 = backgroundList[1]; 
 
-    fly() {
-      let rigidBody = this.node.getComponent(cc.RigidBody);
-      rigidBody.linearVelocity = cc.v2(0, 150);
-    }
+      background1.x -= this.speed * dt;
+      background2.x -= this.speed * dt;
 
-    onBeginContact(contact: cc.PhysicsContact, self, other) {
-      console.log('开始碰撞');
-      if (other.tag == 11) {
-        console.log('碰撞地面');
+      if (background1.x <= -this.width) {
+        background1.x = background2.x + this.width;
       }
-      if (other.tag == 12) {
-        console.log('碰撞上管道');
-      }
-      if (other.tag == 13) {
-        console.log('碰撞下管道');
-      }
-      if (other.tag == 14) {
-        console.log('通过管道标识');
-      }
-    }
 
-    onEndContact(contact: cc.PhysicsContact, self, other) {
-      console.log('碰撞结束');
+      if (background2.x <= -this.width) {
+        background2.x = background1.x + this.width;
+      }
     }
-    
 }
